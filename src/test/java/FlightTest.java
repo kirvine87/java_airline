@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+
 import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
@@ -13,7 +14,7 @@ public class FlightTest {
     public void setUp(){
         plane = new Plane(PlaneType.BOEING747);
         passenger = new Passenger("Kyle", 2);
-        flight = new Flight(plane, "FR4767", "AMS", "GLA", "15:00");
+        flight = new Flight(plane, "FR4767", "AMS", "GLA", 21/02/2019, 06, 27);
     }
 
     @Test

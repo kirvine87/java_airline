@@ -17,7 +17,7 @@ public class FlightManagerTest {
         passenger = new Passenger("Kyle", 2);
         passenger2 = new Passenger("Kyle2", 2);
         plane = new Plane(PlaneType.BOEING747);
-        flight = new Flight(plane, "FR4767", "AMS", "GLA", "15:00");
+        flight = new Flight(plane, "FR4767", "AMS", "GLA", 1/04/2019, 07, 03 );
         flight.bookPassenger(passenger);
         flight.bookPassenger(passenger2);
     }
