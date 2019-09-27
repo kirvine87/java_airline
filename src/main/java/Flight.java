@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.Random;
 
 public class Flight {
 
@@ -9,6 +11,7 @@ public class Flight {
     private String destination;
     private String departureAirport;
     private Date departureTime;
+    ArrayList<Integer> number = new ArrayList();
 
 
     public Flight(Plane plane, String flightNumber, String destination, String departureAirport, int date, int hours, int min){
@@ -16,7 +19,7 @@ public class Flight {
         this.flightNumber = flightNumber;
         this.destination = destination;
         this.departureAirport = departureAirport;
-        this.departureTime = new Date(date, hours, date);
+        this.departureTime = new Date(date, hours, min);
         passengers = new ArrayList<Passenger>();
     }
 
@@ -31,6 +34,9 @@ public class Flight {
 
     public void bookPassenger(Passenger passenger){
         if (remainingSeats() <= noOfAvailableSeats(plane)) {
+            String flightNo = getFlightNumber();
+            passenger.setFlightNo(flightNo);
+            passenger.setSeatNumber(getRandomNumber());
             this.passengers.add(passenger);
         }
     }
@@ -38,4 +44,29 @@ public class Flight {
     public ArrayList<Passenger> getPassengers() {
         return passengers;
     }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public void randomNumberArray(){
+        for (int i = 1; i < noOfAvailableSeats(plane) + 1 ; i++) {
+            number.add(i);
+        }
+    }
+
+    public int getRandomNumber(){
+        Collections.shuffle(number);
+        return number.remove(0);
+    }
+
+    public int noNumberTheSame(){
+        int total = 0;
+        for (Passenger passenger : passengers){
+            int value = passenger.getSeatNumber();
+            total += value;
+        }
+        return total;
+    }
+
 }
