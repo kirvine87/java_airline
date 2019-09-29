@@ -18,6 +18,7 @@ public class FlightManagerTest {
         passenger2 = new Passenger("Kyle2", 2);
         plane = new Plane(PlaneType.BOEING747);
         flight = new Flight(plane, "FR4767", "AMS", "GLA", 1/04/2019, 07, 03 );
+        flight.randomNumberArray();
         flight.bookPassenger(passenger);
         flight.bookPassenger(passenger2);
     }
