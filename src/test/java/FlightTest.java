@@ -66,21 +66,6 @@ public class FlightTest {
         assertEquals(55, flight.noNumberTheSame());
     }
 
-//    @Test
-//    public void bubbleArrayWorks(){
-//        flight.randomNumberArray();
-//        flight.bookPassenger(passenger);
-//        flight.bookPassenger(passenger2);
-//        flight.bookPassenger(passenger3);
-//        flight.bookPassenger(passenger4);
-//        flight.bookPassenger(passenger5);
-//        flight.bookPassenger(passenger6);
-//        flight.bookPassenger(passenger7);
-//        flight.bookPassenger(passenger8);
-//        flight.bookPassenger(passenger9);
-//        flight.bookPassenger(passenger10);
-//        flight.bubbleSort(flight.getNumber());
-//        assertEquals(10, flight.lastNumber());
-//    }
+
 
 }

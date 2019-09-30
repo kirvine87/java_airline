@@ -50,7 +50,7 @@ public class Flight {
     }
 
     public void randomNumberArray(){
-        for (int i = 1; i < noOfAvailableSeats(plane) + 1 ; i++) {
+        for (int i = 1; i < noOfAvailableSeats(plane) + 1; i++) {
             number.add(i);
         }
     }
@@ -69,29 +69,13 @@ public class Flight {
         return total;
     }
 
-//
-//    public void bubbleSort(ArrayList<Integer> x) {
-//        boolean swapped = true;
-//        while (swapped) {
-//            swapped = false;
-//            for(int i=1; i<x.size(); i++) {
-//                if(x.get(i) > x.get(i+1)) {
-//                    int temp = x.get(i+1);
-//                    number.set(i+1, x.get(i));
-//                    number.set(i, temp);
-//                    swapped = true;
-//                }
-//            }
-//        }
-//    }
-
 
     public ArrayList<Integer> getNumber() {
         return number;
     }
 
     public int lastNumber(){
-        return number.get(0);
+        return number.get(9);
     }
 
 }
